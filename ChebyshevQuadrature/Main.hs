@@ -20,7 +20,7 @@ integralFunction x =
 main :: IO ()
 main =
     forever $ do
-    putStrLn "Enter lower bound:"
+    putStrLn "\nEnter lower bound:"
     lowerBound  <- readLn
     putStrLn "Enter upper bound:"
     upperBound  <- readLn
