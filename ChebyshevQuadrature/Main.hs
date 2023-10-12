@@ -20,10 +20,10 @@ integralFunction x =
 main :: IO ()
 main =
     forever $ do
-    putStrLn "\nEnter lower bound:"
-    lowerBound  <- readLn
-    putStrLn "Enter upper bound:"
-    upperBound  <- readLn
-    putStrLn "Enter number of segments:"
-    numberOfSegments <- readLn
-    putStrLn $ "Result: " ++ show (chebyshevQuadrature integralFunction lowerBound upperBound numberOfSegments)
+        putStrLn "\nEnter lower bound:"
+        lowerBound  <- readLn
+        putStrLn "Enter upper bound:"
+        upperBound  <- readLn
+        putStrLn "Enter number of segments:"
+        numberOfSegments <- readLn
+        putStrLn $ "Result: " ++ show (chebyshevQuadrature integralFunction lowerBound upperBound numberOfSegments)
