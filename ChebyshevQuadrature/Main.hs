@@ -13,10 +13,6 @@ chebyshevQuadrature integralFunction lowerBound upperBound numberOfSegments =
         node segmentIndex =
             0.5 * (upperBound - lowerBound) * cos (pi * fromIntegral (2 * segmentIndex + 1) / (2 * fromIntegral (numberOfSegments + 1)) + (lowerBound + upperBound) / 2)
 
-integralFunction :: Double -> Double
-integralFunction x =
-    x * x
-
 main :: IO ()
 main =
     forever $ do
@@ -27,3 +23,7 @@ main =
         putStrLn "Enter number of segments:"
         numberOfSegments <- readLn
         putStrLn $ "Result: " ++ show (chebyshevQuadrature integralFunction lowerBound upperBound numberOfSegments)
+        where
+            integralFunction :: Double -> Double
+            integralFunction x =
+                x * x
