@@ -4,7 +4,7 @@ module Haskell.Modules.InputValidation.Main ( getValidInput ) where
     import Data.Typeable ( typeRep, Typeable )
     import Text.Read ( readMaybe )
 
-    getValidInput :: forall someType. (Read someType, Typeable someType) => String -> IO someType
+    getValidInput :: forall someType . (Read someType, Typeable someType) => String -> IO someType
     getValidInput prompt = do
         putStrLn prompt
         input <- getLine

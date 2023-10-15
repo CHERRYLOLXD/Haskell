@@ -7,6 +7,7 @@ module Haskell.Modules.NumericalIntegration.TrapezoidMethod.Main ( trapezoidalMe
     trapezoidalMethod integralFunction lowerLimit upperLimit segmentCount =
         (segmentWidth / 2) * (integralFunction lowerLimit + 2 * sum [integralFunction midpoint | midpoint <- [lowerLimit + fromIntegral segmentIndex * segmentWidth | segmentIndex <- [1..segmentCount - 1]]] + integralFunction upperLimit)
         where
+            
             segmentWidth :: Double
             segmentWidth =
                 (upperLimit - lowerLimit) / fromIntegral segmentCount

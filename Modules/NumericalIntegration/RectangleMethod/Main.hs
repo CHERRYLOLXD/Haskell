@@ -7,6 +7,7 @@ module Haskell.Modules.NumericalIntegration.RectangleMethod.Main ( rectangleMeth
     rectangleMethod integralFunction lowerLimit upperLimit segmentCount =
         segmentWidth * sum [integralFunction midpoint | midpoint <- [lowerLimit + segmentWidth * (fromIntegral segmentIndex + 0.5) | segmentIndex <- [0..segmentCount - 1]]]
         where
+            
             segmentWidth :: Double
             segmentWidth =
                 (upperLimit - lowerLimit) / fromIntegral segmentCount
