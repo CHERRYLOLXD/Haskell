@@ -1,4 +1,4 @@
-module Modules.InputValidation.Main where
+module Modules.Input.Validation.Main where
 
     import Data.Proxy (Proxy(..))
     import Data.Typeable (typeRep, Typeable)
