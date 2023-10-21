@@ -1,3 +1,3 @@
 # Haskell
 
-Some haskell projects
+Some Haskell projects
